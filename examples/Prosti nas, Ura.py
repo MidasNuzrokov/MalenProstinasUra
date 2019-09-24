@@ -1,4 +1,5 @@
 from graph import *
+### Function
 import math
 def oval(x,y,a,b,q=0):
     moveTo(x-a,y)
@@ -18,7 +19,14 @@ def soplo_right(x,y):
 def soplo_right(x,y):
     polygon([(x, y), (x+30,y+100),
              (x+70,y+195),(x+60,y+201),(x+50,y+205), (x+40,y+209), (x+30,y+211),(x+10,y+214), (x,y+216), (x-3,y+213),(x-4,y+213), (x-6,y+215),(x-8,y+213),(x-9,y+214),(x-11,y+204),(x-2,y+100),])
-
+def San():
+    global X, Y, Saturn
+    deleteObject(Saturn)
+    penColor(195, 152, 35)
+    brushColor(195, 152, 35)
+    X += 5
+    Y += 1
+    Saturn = circle(X, Y, 90)
 
 penColor("black")
 penSize(5)
@@ -32,7 +40,7 @@ rectangle(0, 600, 1000, 300)
 ###Saturn
 penColor(195,152,35)
 brushColor(195,152,35)
-circle(380, 150, 90)
+Saturn = circle(380, 150, 90)
 ###Raketa
 penColor('black')
 penSize(1)
@@ -85,7 +93,10 @@ soplo_right(120,260)
 penColor("red")
 brushColor("red")
 soplo_right(130,310)
-
+###Animazia
+X = 380
+Y = 150
+onTimer(San,50)
 
 
 
