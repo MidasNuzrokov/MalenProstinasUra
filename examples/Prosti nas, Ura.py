@@ -1,4 +1,5 @@
 from graph import *
+import random
 ### Function
 import math
 def oval(x,y,a,b,q=0):
@@ -24,15 +25,20 @@ def San():
     deleteObject(Saturn)
     penColor(195, 152, 35)
     brushColor(195, 152, 35)
-    X += 5
+    X += 3
     Y += 1
     Saturn = circle(X, Y, 90)
 
 penColor("black")
-penSize(5)
+penSize(2)
 brushColor("black")
 ###Размеры поля
 rectangle(0, 0, 1000, 300)
+penColor("white")
+for i in range(1, 50, 1):
+    W = random.randint(0, 1000)
+    Q = random.randint(0, 300)
+    point(W, Q)
 penColor(90, 35, 17)
 penSize(5)
 brushColor(90, 35, 17)
@@ -96,7 +102,7 @@ soplo_right(130,310)
 ###Animazia
 X = 380
 Y = 150
-onTimer(San,50)
+onTimer(San,75)
 
 
 
